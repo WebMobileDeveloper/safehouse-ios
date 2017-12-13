@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nde-53-5Dr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="DHa-pj-6dA">
+            <objects>
+                <viewController restorationIdentifier="StartViewController" storyboardIdentifier="StartViewController" automaticallyAdjustsScrollViewInsets="NO" id="3QH-Vi-nOb" customClass="StartViewController" customModule="Safehouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EMR-Tj-eyI"/>
+                        <viewControllerLayoutGuide type="bottom" id="vkR-Of-fUf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CTM-t9-Uuy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90y-hr-v6D">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3QH-Vi-nOb" id="tZC-vg-1Hh"/>
+                                </connections>
+                            </scrollView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BJ-dt-Pw5">
+                                <rect key="frame" x="122" y="588" width="132" height="34"/>
+                                <state key="normal" title="GET STARTED ❭">
+                                    <color key="titleColor" white="1" alpha="0.48564040492957744" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnStartClick:" destination="3QH-Vi-nOb" eventType="touchUpInside" id="hO4-hy-S6E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="90y-hr-v6D" firstAttribute="top" secondItem="CTM-t9-Uuy" secondAttribute="top" id="3gq-AM-hgY"/>
+                            <constraint firstItem="vkR-Of-fUf" firstAttribute="top" secondItem="6BJ-dt-Pw5" secondAttribute="bottom" constant="45" id="3yC-uD-Oht"/>
+                            <constraint firstItem="90y-hr-v6D" firstAttribute="leading" secondItem="CTM-t9-Uuy" secondAttribute="leading" id="4s9-tC-hUk"/>
+                            <constraint firstItem="vkR-Of-fUf" firstAttribute="top" secondItem="90y-hr-v6D" secondAttribute="bottom" id="71X-Rb-HDd"/>
+                            <constraint firstAttribute="trailing" secondItem="90y-hr-v6D" secondAttribute="trailing" id="i6F-KU-crU"/>
+                            <constraint firstItem="6BJ-dt-Pw5" firstAttribute="centerX" secondItem="CTM-t9-Uuy" secondAttribute="centerX" id="wV3-AH-kM7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="l9c-2w-uPD"/>
+                    <connections>
+                        <outlet property="BtnStart" destination="6BJ-dt-Pw5" id="JGv-d3-4jn"/>
+                        <outlet property="scrollView" destination="90y-hr-v6D" id="Nwb-6V-tox"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IhY-ny-ZzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3370.4000000000001" y="62.518740629685162"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="me5-Qw-ajd">
+            <objects>
+                <navigationController restorationIdentifier="rootNavigationController" storyboardIdentifier="rootNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="nde-53-5Dr" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6n0-En-yNl">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3QH-Vi-nOb" kind="relationship" relationship="rootViewController" id="7Nk-9J-8TM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PHo-6g-hzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4127" y="64"/>
+        </scene>
+    </scenes>
+</document>
